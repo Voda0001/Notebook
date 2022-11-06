@@ -22,7 +22,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run Script and Update Plot
         run: |
-          jupyter nbconvert --to script --execute ipynbfiles/
+          jupyter nbconvert --to script --execute ipynbfiles/test1.ipynb
       - name: Lint with Pylint
         run: |
           pylint $(git ls-files '*.py')
