@@ -22,6 +22,5 @@ jobs:
           pip install -r requirements.txt
       - name: Run Script and Update Plot
         run: |
-          jupyter nbconvert --to script --execute ipynbfiles/test1.ipynb --output-dir=/tmp/converted-notebooks/ \
-          ./notebooks/*.ipynb
+          jupyter nbconvert --to script --execute ipynbfiles/test1.ipynb --output-dir=/tmp/converted-notebooks/*.ipynb
           pylint /tmp/converted-notebooks/*.py
